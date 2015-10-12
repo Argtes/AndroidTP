@@ -1,32 +1,22 @@
 package com.example.marc_olivier.androidtp;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.Spinner;
 
-public class MainActivity extends AppCompatActivity {
+public class EcranSecondaire extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        Spinner spTerminal = (Spinner) findViewById(R.id.terminal);
-        ArrayAdapter adTerminal = ArrayAdapter.createFromResource(this, R.array.tablets, android.R.layout.simple_spinner_item);
-        spTerminal.setAdapter(adTerminal);
-        Spinner spStu = (Spinner) findViewById(R.id.stu);
-        ArrayAdapter adStu = ArrayAdapter.createFromResource(this, R.array.students, android.R.layout.simple_spinner_item);
-        spStu.setAdapter(adStu);
+        setContentView(R.layout.activity_ecran_secondaire);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.menu_ecran_secondaire, menu);
         return true;
     }
 
@@ -43,10 +33,5 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
-    }
-
-    public void doGo(View view){
-        Intent intent= new Intent(MainActivity.this, EcranSecondaire.class);
-        startActivity(intent);
     }
 }

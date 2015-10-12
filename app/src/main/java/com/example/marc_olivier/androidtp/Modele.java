@@ -1,6 +1,7 @@
 package pratsm.iut.myapplication2.app;
 
 import android.app.Activity;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import com.example.marc_olivier.androidtp.R;

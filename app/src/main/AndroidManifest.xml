@@ -16,6 +16,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".EcranSecondaire"
+            android:label="@string/title_activity_ecran_secondaire" >
+        </activity>
     </application>
 
 </manifest>
