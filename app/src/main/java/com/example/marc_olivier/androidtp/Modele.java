@@ -44,5 +44,45 @@ existant dans les r�f�rences. */
         public int getCount() {
                 return tablettes.length;
         }
+		
+		/**
+* getStudent: Retourne le numéroi de l'étudiant associé à une tablette.
+* (0 si pas d'étudiant -> tablette disponible)
+* @param position Le numéro de la tablette visée (de 0 à ... )
+* @return le numéro de l'étudiant associé.
+*/
+public int getStudent(int position) {
+return students[position] ;
+}
+/**
+* getTerminal: Calcule le nom d'une tablette.
+* @param position: le numéro de la tablette (0 à ...)
+* @return Le nom courant de la tablette.
+*/
+public String getTerminal(int position) {
+if (position < 0) return null ;
+if (position >= tablettes.length) return null ;
+return tablettes[position] ;
+}
+/**
+* setStudent: Affecte un étudiant (spcifié par son numéro) à une tablette (spécifiée par son index).
+* Permet également de rendre disponioble une tablette (si student = 0).
+* Retourne faux en cas d'érreur:
+* - Si l'étudiant a déjà une autre tablette affectée.
+* - Si Si le numéro d'étudiant n'est pas valide (entre 0 et nbEtudiants).
+* @param position
+* @param student
+* @return Vrai si ok, faux sinon.
+*/
+public boolean setStudent(int position, int student) {
+if (student != 0) {
+for (int i = 0 ; i < students.length ; i++) {
+if ((i != position) &&(students[i] == student)) return false ;
+}
+}
+students[position] = student ;
+return true ;
+}
+}
 
 }
